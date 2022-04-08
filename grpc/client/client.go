@@ -16,8 +16,8 @@ type grpcService struct {
 }
 
 // NewGRPCService creates a new gRPC user service connection using the specified connection string.
-func NewGRPCService(connString string) (mysvc.Service, error) {
-	conn, err := grpc.Dial(connString, grpc.WithInsecure())
+func NewGRPCService(onnString string, authorityHeader string) (mysvc.Service, error) {
+	conn, err := grpc.Dial(connString, grpc.WithInsecure(),grpc.WithAuthority(authorityHeader))
 	if err != nil {
 		return nil, err
 	}
