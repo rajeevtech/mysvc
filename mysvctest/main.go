@@ -5,9 +5,9 @@ import (
 	"log"
 	"os"
 
-	"github.com/neocortical/mysvc"
-	mysvccore "github.com/neocortical/mysvc/core"
-	mysvcgrpc "github.com/neocortical/mysvc/grpc/client"
+	"github.com/rajeevtech/mysvc"
+	mysvccore "github.com/rajeevtech/mysvc/core"
+	mysvcgrpc "github.com/rajeevtech/mysvc/grpc/client"
 	"github.com/xiam/to"
 )
 
@@ -15,7 +15,7 @@ func main() {
 	var localService, grpcService mysvc.Service
 
 	localService = mysvccore.NewService()
-	grpcService, err := mysvcgrpc.NewGRPCService(os.Getenv("GRPC_ADDR"))
+	grpcService, err := mysvcgrpc.NewGRPCService(os.Getenv("GRPC_ADDR"), os.Getenv("GRPC_AUTHORITYHEADER"))
 	if err != nil {
 		log.Printf("error instantiating gRPC service: %v\n", err)
 		os.Exit(1)

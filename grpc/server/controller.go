@@ -4,8 +4,8 @@ import (
 	"context"
 	"log"
 
-	"github.com/neocortical/mysvc"
-	mysvcgrpc "github.com/neocortical/mysvc/grpc"
+	"github.com/rajeevtech/mysvc"
+	mysvcgrpc "github.com/rajeevtech/mysvc/grpc"
 )
 
 // userServiceController implements the gRPC UserServiceServer interface.

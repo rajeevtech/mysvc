@@ -1,7 +1,7 @@
 package core
 
 import (
-	"github.com/neocortical/mysvc"
+	"github.com/rajeevtech/mysvc"
 )
 
 type service struct {

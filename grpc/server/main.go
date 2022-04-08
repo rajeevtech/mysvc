@@ -5,8 +5,8 @@ import (
 	"net"
 	"os"
 
-	mysvccore "github.com/neocortical/mysvc/core"
-	mysvcgrpc "github.com/neocortical/mysvc/grpc"
+	mysvccore "github.com/rajeevtech/mysvc/core"
+	mysvcgrpc "github.com/rajeevtech/mysvc/grpc"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/reflection"
 )

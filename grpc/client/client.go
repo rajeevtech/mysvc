@@ -4,8 +4,8 @@ import (
 	"context"
 	"time"
 
-	"github.com/neocortical/mysvc"
-	mysvcgrpc "github.com/neocortical/mysvc/grpc"
+	"github.com/rajeevtech/mysvc"
+	mysvcgrpc "github.com/rajeevtech/mysvc/grpc"
 	"google.golang.org/grpc"
 )
 
@@ -16,8 +16,8 @@ type grpcService struct {
 }
 
 // NewGRPCService creates a new gRPC user service connection using the specified connection string.
-func NewGRPCService(onnString string, authorityHeader string) (mysvc.Service, error) {
-	conn, err := grpc.Dial(connString, grpc.WithInsecure(),grpc.WithAuthority(authorityHeader))
+func NewGRPCService(connString string, authorityHeader string) (mysvc.Service, error) {
+	conn, err := grpc.Dial(connString, grpc.WithInsecure(), grpc.WithAuthority(authorityHeader))
 	if err != nil {
 		return nil, err
 	}
