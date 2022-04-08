@@ -1,4 +1,4 @@
-module github.com/neocortical/mysvc
+module github.com/rajeevtech/mysvc
 
 go 1.14
 
